@@ -1,22 +1,24 @@
-import React from 'react';
-import {Routes,Navigate, Route,BrowserRouter as Router } from 'react-router-dom';
-import Cars from './components/Cars';
-import Dashboard from './pages/Dashboard';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+import React from "react";
+import {
+  Routes,
+  Navigate,
+  Route,
+  BrowserRouter as Router,
+} from "react-router-dom";
+import Cars from "./components/Cars";
+import Dashboard from "./pages/Dashboard";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
-
-
-
-import PrivateRoute from './components/PrivateRoute';
+import PrivateRoute from "./components/PrivateRoute";
 
 const App = () => {
   const token = localStorage.getItem("token");
   return (
     <Router>
-    <Routes>
-        <Route exact path="/login" element={<Login/>} />
-        <Route exact path="/signup" element={<Signup/>} />
+      <Routes>
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/signup" element={<Signup />} />
         <Route
           path="/dashboard"
           element={
@@ -25,9 +27,9 @@ const App = () => {
             </PrivateRoute>
           }
         />
-        <Route exact path="/cars" element={<Cars/>} />
+        <Route exact path="/cars" element={<Cars />} />
         <Route path="*" element={<Navigate to="/dashboard" />} />
-    </Routes>
+      </Routes>
     </Router>
   );
 };

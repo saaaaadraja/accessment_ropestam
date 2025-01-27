@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DataTable from "react-data-table-component";
-import DOMPurify from "dompurify";  // Import DOMPurify
+import DOMPurify from "dompurify"; // Import DOMPurify
 import "../style.css";
 
 const Cars = () => {
