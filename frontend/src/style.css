@@ -1,0 +1,28 @@
+.basic-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+  }
+  
+  .basic-table th, 
+  .basic-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .basic-table thead tr {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .basic-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .basic-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
